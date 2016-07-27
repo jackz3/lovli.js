@@ -5,6 +5,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import store from './store';
 
 import App from './components/App';
+import Demo from './components/Demo';
 
 // Sync routing history with redux store
 const history = syncHistoryWithStore(browserHistory, store);
@@ -13,5 +14,6 @@ const history = syncHistoryWithStore(browserHistory, store);
 export default (
   <Router history={history}>
     <Route path="/" component={App} />
+    <Route path="/demo" component={Demo} />
   </Router>
 );
